@@ -3,25 +3,36 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev --turbopack",
+    "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "import-posts": "node src/scripts/import-posts.js",
+    "download-images": "node src/scripts/download-images.js",
+    "new-post": "node src/scripts/create-post.js",
+    "build-posts": "node src/scripts/build-posts.js"
   },
   "dependencies": {
-    "react": "^19.0.0",
-    "react-dom": "^19.0.0",
-    "next": "15.2.2"
+    "fast-xml-parser": "^5.0.9",
+    "gray-matter": "^4.0.3",
+    "markdown-it": "^14.0.0",
+    "markdown-it-image-figures": "^2.1.1",
+    "next": "^14.2.24",
+    "react": "^18",
+    "react-dom": "^18",
+    "remove-markdown": "^0.5.0"
   },
   "devDependencies": {
-    "typescript": "^5",
-    "@types/node": "^20",
+    "@eslint/eslintrc": "^3",
+    "@tailwindcss/postcss": "^4",
+    "@tailwindcss/typography": "^0.5.16",
+    "@types/node": "^20.17.24",
     "@types/react": "^19",
     "@types/react-dom": "^19",
-    "@tailwindcss/postcss": "^4",
-    "tailwindcss": "^4",
     "eslint": "^9",
     "eslint-config-next": "15.2.2",
-    "@eslint/eslintrc": "^3"
+    "tailwindcss": "^4",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.8.2"
   }
 }
