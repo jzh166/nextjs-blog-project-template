@@ -9,6 +9,14 @@ const nextConfig = {
       },
     ],
   },
+  async rewrites() {
+    return [
+      {
+        source: '/wp-content/uploads/:path*',
+        destination: 'https://zhangj.ing/wp-content/uploads/:path*',
+      },
+    ];
+  },
 }
 
 module.exports = nextConfig

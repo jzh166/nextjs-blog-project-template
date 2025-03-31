@@ -34,6 +34,13 @@ function processMarkdownFile(filePath) {
   // Convert markdown to HTML
   const htmlContent = md.render(content);
   
+  // Fix video and image URLs
+  const processedContent = htmlContent
+    // Fix video src attributes from external URLs to local path
+    .replace(/src="https:\/\/zhangj\.ing\/wp-content\/uploads\//g, 'src="/wp-content/uploads/')
+    // Fix image src attributes from external URLs to local path
+    .replace(/src="https:\/\/zhangj\.ing\/wp-content\/uploads\//g, 'src="/wp-content/uploads/');
+  
   // Create clean excerpt
   const plainText = removeMd(content);
   const excerpt = plainText.slice(0, 200).trim() + (plainText.length > 200 ? '...' : '');
@@ -41,8 +48,8 @@ function processMarkdownFile(filePath) {
   return {
     title: data.title,
     date: data.date,
-    coverImage: data.coverImage ? `/content/images/${data.coverImage}` : undefined,
-    content: htmlContent,
+    coverImage: data.coverImage ? `/blog-images/${data.coverImage}` : undefined,
+    content: processedContent,
     excerpt,
     slug
   };
