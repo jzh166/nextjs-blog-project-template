@@ -2,6 +2,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import { getProjectBySlug } from '@/utils/projects';
+import React from 'react';
 
 // Function to process content and fix URLs if needed
 function processContent(content: string): string {
@@ -20,15 +21,51 @@ function processContent(content: string): string {
   return processedContent;
 }
 
+// Function to render different content types
+function renderContent(content: any): React.ReactNode {
+  // If content is a string, process it as before
+  if (typeof content === 'string') {
+    return <div dangerouslySetInnerHTML={{ __html: processContent(content) }} />;
+  }
+  
+  // If content is an array, render each item properly
+  if (Array.isArray(content)) {
+    return (
+      <>
+        {content.map((item, index) => {
+          if (item.type === 'paragraph') {
+            return <p key={index} className="my-4">{item.text}</p>;
+          } else if (item.type === 'image') {
+            return (
+              <figure key={index} className="my-8">
+                <img 
+                  src={item.url} 
+                  alt={item.caption || ''} 
+                  className="rounded-lg mx-auto max-w-full h-auto"
+                />
+                {item.caption && item.caption.trim() !== " " && (
+                  <figcaption className="text-center text-gray-500 mt-2">
+                    {item.caption}
+                  </figcaption>
+                )}
+              </figure>
+            );
+          }
+          return null;
+        })}
+      </>
+    );
+  }
+  
+  return null;
+}
+
 export default function ProjectPage({ params }: { params: { slug: string } }) {
   const project = getProjectBySlug(params.slug);
   
   if (!project) {
     notFound();
   }
-
-  // Process content to fix URLs
-  const processedContent = processContent(project.content);
 
   return (
     <main className="min-h-screen p-4 sm:p-8">
@@ -59,7 +96,7 @@ export default function ProjectPage({ params }: { params: { slug: string } }) {
             </time>
             
             <div className="flex flex-wrap gap-2">
-              {project.technologies.map((tech, index) => (
+              {project.technologies && project.technologies.map((tech, index) => (
                 <span key={index} className="bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded">
                   {tech}
                 </span>
@@ -93,10 +130,9 @@ export default function ProjectPage({ params }: { params: { slug: string } }) {
             </div>
           )}
           
-          <div 
-            className="prose prose-blue max-w-none"
-            dangerouslySetInnerHTML={{ __html: processedContent }}
-          />
+          <div className="prose prose-blue max-w-none">
+            {renderContent(project.content)}
+          </div>
           
           <div className="mt-8 pt-4 border-t">
             <Link 
