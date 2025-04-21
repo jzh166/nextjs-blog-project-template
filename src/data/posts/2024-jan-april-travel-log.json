@@ -4,5 +4,5 @@
   "content": "<!-- wp:paragraph -->\n<p></p>\n<!-- /wp:paragraph -->\n\n<!-- wp:paragraph -->\n<p>20240408 solar eclipse @ US northeastern </p>\n<!-- /wp:paragraph -->\n\n<!-- wp:image {\"id\":29,\"sizeSlug\":\"large\",\"linkDestination\":\"none\"} -->\n<figure class=\"wp-block-image size-large\"><img src=\"https://zhangj.ing/wp-content/uploads/2024/05/image-1024x576.png\" alt=\"\" class=\"wp-image-29\"/></figure>\n<!-- /wp:image -->\n\n<!-- wp:paragraph -->\n<p></p>\n<!-- /wp:paragraph -->",
   "excerpt": "20240408 solar eclipse @ US northeastern \n\n\n\n<img src=\"https://zhangj.ing/wp-conte",
   "slug": "2024-jan-april-travel-log",
-  "coverImage": "https://zhangj.ing/wp-content/uploads/2024/05/image-1024x576.png"
+  "coverImage": "/blog-images/image-1024x576.png"
 }

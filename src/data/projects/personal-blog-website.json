@@ -1,11 +1,34 @@
 {
-  "slug": "personal-blog-website",
-  "title": "Personal Blog Website",
+  "slug": "Stimulated-Raman-Activated-Cell-Sorting",
+  "title": "Stimulated Raman Activated Cell Sorting",
   "date": "2025-03-30",
-  "excerpt": "A modern blog website built with Next.js, TypeScript, and Tailwind CSS featuring responsive design and markdown content support.",
-  "coverImage": "/blog-images/website-screenshot.jpg",
-  "content": "<p>This personal blog website was built using modern web technologies to create a fast, responsive, and user-friendly platform for sharing blog posts and projects.</p><h2>Key Features</h2><ul><li>Responsive design that works on all devices</li><li>Fast page loads with Next.js</li><li>Markdown content support</li><li>Image and video optimization</li><li>SEO-friendly structure</li></ul><h2>Technical Implementation</h2><p>The website is built with a modern tech stack including:</p><ul><li>Next.js 14 for server-side rendering and static site generation</li><li>TypeScript for type safety</li><li>Tailwind CSS for styling</li><li>Markdown processing for content</li></ul><p>The blog posts are stored as JSON files and can be easily updated. The website automatically generates pages for each blog post and project.</p>",
-  "technologies": ["Next.js", "TypeScript", "Tailwind CSS", "React"],
-  "githubUrl": "/project-images/website.bmp",
+  "excerpt": "A new way to sort cells based on their chemical composition using advanced optical techniques.",
+  "coverImage": "/project-images/website.bmp",
+  "content": [
+    {
+      "type": "paragraph",
+      "text": "Cell sorting is essential for many biological applications. Our new approach uses stimulated Raman spectroscopy for label-free cell sorting."
+    },
+    {
+      "type": "image",
+      "url": "/blog-images/PXL_20241222_193824113-1.jpg",
+      "caption": "Microscopy setup for cell sorting using Raman spectroscopy."
+    },
+    {
+      "type": "paragraph",
+      "text": "This technique allows for high-throughput analysis and sorting of cells based on their intrinsic chemical properties without the need for labels or markers."
+    },
+    {
+      "type": "paragraph",
+      "text": "The system can detect subtle differences in cellular composition, enabling new applications in cancer research, stem cell biology, and pharmaceutical development."
+    },
+    {
+      "type": "image",
+      "url": "/blog-images/PXL_20241222_201801849.jpg",
+      "caption": "Data visualization showing cell classification based on Raman spectra."
+    }
+  ],  
+  "technologies": ["Microscopy", "Cell sorting", "Image processing", "Multimodal imaging"],
+  "githubUrl": "https://github.com/username/raman-cell-sorting",
   "demoUrl": "https://zhangj.ing"
 }
