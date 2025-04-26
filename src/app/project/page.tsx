@@ -3,15 +3,15 @@ import Link from 'next/link';
 import { getAllProjects } from '@/utils/projects';
 import { Project } from '@/types/project';
 
-export default function ProjectPage() {
-  const projects = getAllProjects();
+export default async function ProjectPage() {
+  const projects = await getAllProjects();
 
   return (
     <main className="min-h-screen p-8">
       <div className="max-w-4xl mx-auto">
         <h1 className="text-3xl font-bold mb-8">Projects</h1>
         <div className="grid gap-8">
-          {projects.map((project: Project) => (
+          {projects && projects.map((project: Project) => (
             <article key={project.slug} className="border rounded-lg overflow-hidden shadow-lg bg-white hover:shadow-xl transition-shadow">
               <div className="md:flex">
                 {project.coverImage && (
@@ -51,8 +51,8 @@ export default function ProjectPage() {
                     {project.excerpt}
                   </p>
                   
-                  <div className="flex gap-4">
-                    <Link
+                  <div className="flex flex-wrap gap-3 mt-4">
+                    <Link 
                       href={`/project/${project.slug}`}
                       className="inline-block text-blue-600 hover:text-blue-800 font-medium"
                     >
@@ -67,6 +67,17 @@ export default function ProjectPage() {
                         className="inline-block text-gray-600 hover:text-gray-800 font-medium"
                       >
                         GitHub
+                      </a>
+                    )}
+                    
+                    {project.paperUrl && (
+                      <a 
+                        href={project.paperUrl} 
+                        target="_blank" 
+                        rel="noopener noreferrer"
+                        className="inline-block text-blue-600 hover:text-blue-800 font-medium"
+                      >
+                        Read paper →
                       </a>
                     )}
                     

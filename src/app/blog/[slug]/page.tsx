@@ -1,5 +1,6 @@
 import { getPostBySlug } from '@/utils/posts';
 import { notFound } from 'next/navigation';
+import { processHtmlContent } from '@/utils/markdown';
 
 interface Props {
   params: {
@@ -7,8 +8,8 @@ interface Props {
   };
 }
 
-export default function BlogPost({ params }: Props) {
-  const post = getPostBySlug(params.slug);
+export default async function BlogPost({ params }: Props) {
+  const post = await getPostBySlug(params.slug);
 
   if (!post) {
     notFound();
@@ -28,7 +29,7 @@ export default function BlogPost({ params }: Props) {
           {post.title}
         </h1>
       </header>
-
+      
       {post.coverImage && (
         <div className="relative w-full h-[400px] mb-8">
           <img
@@ -41,7 +42,7 @@ export default function BlogPost({ params }: Props) {
 
       <div 
         className="prose prose-lg dark:prose-invert max-w-none"
-        dangerouslySetInnerHTML={{ __html: post.content || '' }}
+        dangerouslySetInnerHTML={{ __html: processHtmlContent(post.content || '') }}
       />
     </article>
   );

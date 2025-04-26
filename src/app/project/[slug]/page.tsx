@@ -3,29 +3,13 @@ import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import { getProjectBySlug } from '@/utils/projects';
 import React from 'react';
-
-// Function to process content and fix URLs if needed
-function processContent(content: string): string {
-  // Replace external image URLs with local paths if needed
-  let processedContent = content.replace(
-    /https:\/\/zhangj\.ing\/wp-content\/uploads\//g, 
-    '/blog-images/'
-  );
-  
-  // Replace external video URLs with local paths if needed
-  processedContent = processedContent.replace(
-    /https:\/\/zhangj\.ing\/wp-content\/uploads\/(\S+?)\.mp4/g,
-    '/blog-images/$1.mp4'
-  );
-  
-  return processedContent;
-}
+import { processHtmlContent } from '@/utils/markdown';
 
 // Function to render different content types
 function renderContent(content: any): React.ReactNode {
   // If content is a string, process it as before
   if (typeof content === 'string') {
-    return <div dangerouslySetInnerHTML={{ __html: processContent(content) }} />;
+    return <div dangerouslySetInnerHTML={{ __html: processHtmlContent(content) }} />;
   }
   
   // If content is an array, render each item properly
@@ -60,8 +44,8 @@ function renderContent(content: any): React.ReactNode {
   return null;
 }
 
-export default function ProjectPage({ params }: { params: { slug: string } }) {
-  const project = getProjectBySlug(params.slug);
+export default async function ProjectPage({ params }: { params: { slug: string } }) {
+  const project = await getProjectBySlug(params.slug);
   
   if (!project) {
     notFound();
@@ -104,7 +88,7 @@ export default function ProjectPage({ params }: { params: { slug: string } }) {
             </div>
           </div>
           
-          {(project.githubUrl || project.demoUrl) && (
+          {(project.githubUrl || project.paperUrl) && (
             <div className="flex gap-4 mb-6">
               {project.githubUrl && (
                 <a 
@@ -117,14 +101,14 @@ export default function ProjectPage({ params }: { params: { slug: string } }) {
                 </a>
               )}
               
-              {project.demoUrl && (
+              {project.paperUrl && (
                 <a 
-                  href={project.demoUrl} 
+                  href={project.paperUrl} 
                   target="_blank" 
                   rel="noopener noreferrer"
                   className="inline-block bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 transition-colors"
                 >
-                  Live Demo
+                  Read Paper
                 </a>
               )}
             </div>
