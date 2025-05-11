@@ -113,3 +113,11 @@ This template is based on [Vercel's Blog Starter Kit](https://vercel.com/templat
 ## 📄 License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+## Preview creenshots
+
+![Alt text](./template screenshot.png)
+
+![Alt text](./project screenshot.png)
+
+![Alt text](./project detail screenshot.png)
