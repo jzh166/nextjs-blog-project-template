@@ -120,4 +120,4 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ![Alt text](./project%20screenshot.png)
 
-![Alt text](./project%20detail screenshot.png)
+![Alt text](./project%20detail%20screenshot.png)
