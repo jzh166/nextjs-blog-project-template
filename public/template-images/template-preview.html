@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Next.js Blog & Project Template Preview</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .hero {
+            background-color: white;
+            padding: 40px 20px;
+            text-align: center;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            margin-bottom: 40px;
+        }
+        .hero h1 {
+            font-size: 36px;
+            margin-bottom: 12px;
+            color: #111;
+        }
+        .hero p {
+            font-size: 18px;
+            color: #666;
+        }
+        .content-section {
+            margin-bottom: 40px;
+        }
+        .content-section h2 {
+            font-size: 24px;
+            margin-bottom: 20px;
+            color: #111;
+        }
+        .card-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+        .card {
+            background-color: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            transition: box-shadow 0.3s ease;
+        }
+        .card:hover {
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        .card-image {
+            height: 200px;
+            background-color: #e0e0e0;
+            position: relative;
+        }
+        .card-body {
+            padding: 20px;
+        }
+        .card-tag {
+            display: inline-block;
+            background-color: #e3f2fd;
+            color: #0d47a1;
+            padding: 4px 8px;
+            border-radius: 4px;
+            font-size: 12px;
+            font-weight: 500;
+            margin-right: 8px;
+            margin-bottom: 12px;
+        }
+        .card h3 {
+            font-size: 18px;
+            margin-top: 0;
+            margin-bottom: 8px;
+            color: #111;
+        }
+        .card-date {
+            font-size: 14px;
+            color: #666;
+            margin-bottom: 12px;
+            display: block;
+        }
+        .card p {
+            color: #444;
+            line-height: 1.5;
+            margin-bottom: 16px;
+        }
+        .card-link {
+            color: #0d47a1;
+            font-weight: 500;
+            text-decoration: none;
+        }
+        .navbar {
+            background-color: white;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            padding: 0 20px;
+            margin-bottom: 20px;
+        }
+        .navbar-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 64px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .navbar-brand {
+            font-size: 20px;
+            font-weight: 700;
+            color: #111;
+            text-decoration: none;
+        }
+        .navbar-menu {
+            display: flex;
+            gap: 32px;
+        }
+        .navbar-menu a {
+            font-size: 14px;
+            font-weight: 500;
+            color: #555;
+            text-decoration: none;
+        }
+        .about-section {
+            background-color: white;
+            border-radius: 8px;
+            padding: 32px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        }
+        .about-section p {
+            font-size: 16px;
+            line-height: 1.6;
+            color: #444;
+        }
+        .about-section a {
+            color: #0d47a1;
+            font-weight: 500;
+            text-decoration: none;
+        }
+        .tech-tag {
+            display: inline-block;
+            background-color: #f0f0f0;
+            color: #555;
+            padding: 4px 8px;
+            border-radius: 4px;
+            font-size: 12px;
+            margin-right: 4px;
+        }
+        .template-label {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background-color: rgba(0,0,0,0.7);
+            color: white;
+            padding: 4px 8px;
+            border-radius: 4px;
+            font-size: 12px;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="navbar-container">
+            <a href="#" class="navbar-brand">YourName</a>
+            <div class="navbar-menu">
+                <a href="#">Home</a>
+                <a href="#">Project</a>
+                <a href="#">Blog</a>
+                <a href="#">About</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <section class="hero">
+            <h1>Your Name</h1>
+            <p>Your personal tagline goes here</p>
+        </section>
+
+        <section class="content-section">
+            <h2>Latest Updates</h2>
+            <div class="card-grid">
+                <!-- Project Card -->
+                <div class="card">
+                    <div class="card-image">
+                        <div class="template-label">Cover Image</div>
+                    </div>
+                    <div class="card-body">
+                        <div>
+                            <span class="card-tag">Project</span>
+                            <span class="tech-tag">React</span>
+                            <span class="tech-tag">Next.js</span>
+                        </div>
+                        <h3>Sample Project</h3>
+                        <time class="card-date">February 15, 2025</time>
+                        <p>This is a sample project that demonstrates how to showcase your work using markdown.</p>
+                        <a href="#" class="card-link">View Project →</a>
+                    </div>
+                </div>
+
+                <!-- Blog Card -->
+                <div class="card">
+                    <div class="card-image">
+                        <div class="template-label">Cover Image</div>
+                    </div>
+                    <div class="card-body">
+                        <div>
+                            <span class="card-tag" style="background-color: #e8f5e9; color: #1b5e20;">Blog</span>
+                        </div>
+                        <h3>Sample Blog Post</h3>
+                        <time class="card-date">January 15, 2025</time>
+                        <p>This is a sample blog post that demonstrates how to use markdown for your blog content.</p>
+                        <a href="#" class="card-link">Read more →</a>
+                    </div>
+                </div>
+            </div>
+            <div style="display: flex; justify-content: space-between; margin-top: 20px;">
+                <a href="#" class="card-link">View All Projects →</a>
+                <a href="#" class="card-link">View All Posts →</a>
+            </div>
+        </section>
+
+        <section class="content-section">
+            <h2>About Me</h2>
+            <div class="about-section">
+                <p>
+                    Welcome to your personal website! This is where you can share your passions,
+                    showcase your work, and connect with visitors. Customize this section with your own personal introduction.
+                </p>
+                <div style="margin-top: 16px;">
+                    <a href="#" class="card-link">Learn more about me →</a>
+                </div>
+            </div>
+        </section>
+    </div>
+</body>
+</html>

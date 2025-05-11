@@ -29,8 +29,8 @@ export default async function Home() {
       {/* Hero Section */}
       <section className="text-center py-16 bg-white shadow-sm mb-8">
         <div className="max-w-4xl mx-auto px-4">
-          <h1 className="text-4xl font-bold mb-4 text-gray-900">zhangj.ing</h1>
-          <p className="text-xl text-gray-600">Love life more than the meaning of it</p>
+          <h1 className="text-4xl font-bold mb-4 text-gray-900">Your Name</h1>
+          <p className="text-xl text-gray-600">Your personal tagline goes here</p>
         </div>
       </section>
 
@@ -138,9 +138,8 @@ export default async function Home() {
         <h2 className="text-2xl font-semibold mb-6 text-gray-900">About Me</h2>
         <div className="bg-white rounded-lg shadow-lg p-8">
           <p className="text-lg text-gray-600 leading-relaxed">
-            Welcome to my corner of the internet! I'm passionate about exploring new places,
-            experiencing different cultures, and sharing my adventures through photography
-            and storytelling.
+            Welcome to your personal website! This is where you can share your passions,
+            showcase your work, and connect with visitors. Customize this section with your own personal introduction.
           </p>
           <div className="mt-4">
             <Link 

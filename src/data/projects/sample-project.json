@@ -1,0 +1,102 @@
+{
+  "slug": "sample-project",
+  "title": "Sample Project",
+  "date": "2025-02-15",
+  "excerpt": "This is a sample project that demonstrates how to showcase your work in this template.",
+  "coverImage": "/project-images/sample-project-cover.jpg",
+  "technologies": ["React", "Next.js", "TypeScript", "Tailwind CSS"],
+  "githubUrl": "https://github.com/username/sample-project",
+  "demoUrl": "https://example.com/demo",
+  "content": [
+    {
+      "type": "paragraph",
+      "text": "This is a sample project that shows how your portfolio items will be structured and displayed."
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Project Overview"
+    },
+    {
+      "type": "paragraph",
+      "text": "In this section, you can provide a brief introduction to your project, explaining its purpose and the problem it solves."
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Key Features"
+    },
+    {
+      "type": "list",
+      "style": "unordered",
+      "items": [
+        "Feature 1: Description of the first key feature",
+        "Feature 2: Description of the second key feature",
+        "Feature 3: Description of the third key feature with <strong>emphasis</strong>"
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Technologies Used"
+    },
+    {
+      "type": "paragraph",
+      "text": "This project was built using the following technologies:"
+    },
+    {
+      "type": "list",
+      "style": "unordered",
+      "items": [
+        "<strong>React</strong>: Front-end JavaScript library",
+        "<strong>Next.js</strong>: React framework for server-side rendering",
+        "<strong>TypeScript</strong>: Typed JavaScript for better development experience",
+        "<strong>Tailwind CSS</strong>: Utility-first CSS framework"
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Implementation Details"
+    },
+    {
+      "type": "paragraph",
+      "text": "Here you can discuss the technical details of your implementation, challenges faced, and how you overcame them."
+    },
+    {
+      "type": "code",
+      "language": "typescript",
+      "code": "// Example code snippet\nimport { useState, useEffect } from 'react';\n\nfunction ProjectDemo() {\n  const [data, setData] = useState(null);\n  \n  useEffect(() => {\n    // Fetch project data\n    fetch('/api/project-data')\n      .then(response => response.json())\n      .then(data => setData(data));\n  }, []);\n  \n  return (\n    <div className=\"project-container\">\n      {data ? (\n        <div className=\"project-content\">{/* Render project content */}</div>\n      ) : (\n        <div className=\"loading\">Loading project data...</div>\n      )}\n    </div>\n  );\n}"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Screenshots"
+    },
+    {
+      "type": "image",
+      "url": "/project-images/sample-screenshot-1.jpg",
+      "alt": "Sample Project Screenshot 1",
+      "caption": "Screenshot of the main interface"
+    },
+    {
+      "type": "image",
+      "url": "/project-images/sample-screenshot-2.jpg",
+      "alt": "Sample Project Screenshot 2",
+      "caption": "Screenshot showing a key feature in action"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Future Enhancements"
+    },
+    {
+      "type": "paragraph",
+      "text": "In this section, you can outline planned features or improvements for the project."
+    },
+    {
+      "type": "paragraph",
+      "text": "Replace this sample content with information about your actual project before publishing."
+    }
+  ]
+}

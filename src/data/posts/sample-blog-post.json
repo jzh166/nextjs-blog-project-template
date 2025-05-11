@@ -1,0 +1,68 @@
+{
+  "slug": "sample-blog-post",
+  "title": "Sample Blog Post",
+  "date": "2025-01-15",
+  "excerpt": "This is a sample blog post that demonstrates the format and structure used in this template.",
+  "coverImage": "/blog-images/sample-post-cover.jpg",
+  "content": [
+    {
+      "type": "paragraph",
+      "text": "Welcome to your blog post! This is an example of how your blog content will be structured when published."
+    },
+    {
+      "type": "paragraph",
+      "text": "You can include multiple paragraphs to organize your thoughts and ideas."
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Adding Different Content Types"
+    },
+    {
+      "type": "paragraph",
+      "text": "This template supports various content types like paragraphs, headings, lists, code blocks, and images."
+    },
+    {
+      "type": "list",
+      "style": "unordered",
+      "items": [
+        "First point in an unordered list",
+        "Second point with some <strong>bold text</strong>",
+        "Third point with a <a href=\"https://example.com\">link to an example website</a>"
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Code Examples"
+    },
+    {
+      "type": "paragraph",
+      "text": "You can include code snippets in your blog posts:"
+    },
+    {
+      "type": "code",
+      "language": "javascript",
+      "code": "function greet(name) {\n  return `Hello, ${name}!`;\n}\n\nconsole.log(greet('World'));"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Adding Images"
+    },
+    {
+      "type": "paragraph",
+      "text": "Images help to illustrate your points and make your blog posts more engaging:"
+    },
+    {
+      "type": "image",
+      "url": "/blog-images/sample-image.jpg",
+      "alt": "A sample image",
+      "caption": "This is a caption for the sample image."
+    },
+    {
+      "type": "paragraph",
+      "text": "Remember to replace this sample content with your own before publishing your blog post."
+    }
+  ]
+}

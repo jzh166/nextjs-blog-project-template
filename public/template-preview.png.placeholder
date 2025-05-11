@@ -1,0 +1,9 @@
+This is a placeholder file. 
+
+To create the actual template preview image:
+1. Open the file at /public/template-images/template-preview.html in a browser
+2. Take a screenshot of the page
+3. Save the screenshot as template-preview.png in this directory (/public)
+4. Delete this placeholder file
+
+The preview image will be used in your GitHub repository README to showcase the template design.
